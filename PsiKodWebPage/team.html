@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern, responsive web page showcasing our products and team.">
+    <title>PsiKod</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <h2>Ekibimiz</h2>
+            <div class="team-gallery">
+                <!-- Team members will go here -->
+            </div>
+        </section>
+        
+    </main>
+    <script src="script.js"></script>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('/Pages/shared/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+        fetch('/Pages/shared/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>

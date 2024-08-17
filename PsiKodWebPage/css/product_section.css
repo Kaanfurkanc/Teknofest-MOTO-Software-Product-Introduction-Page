@@ -1,16 +1,73 @@
 /* Products Section Stil */
-.products-section, .team-section, .contact-section {
+.products-section {
+    background-color: #000000; /* Arka plan siyah */
     padding: 50px 20px;
     text-align: center;
 }
 
-.product-gallery, .team-gallery {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.products-section h2 {
+    color: #ffffff; /* Başlık yazısı beyaz */
+    margin-bottom: 40px;
+    font-size: 2.5em; /* Başlığı daha büyük yapar */
+    font-weight: bold; /* Başlığı daha kalın yapar */
 }
 
-.product-gallery div, .team-gallery div {
-    margin: 15px;
-    flex-basis: 30%;
+.product-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Kartlar arasındaki boşluk */
+}
+
+.card {
+    background-color: #ffffff; /* Kart arka planı beyaz */
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px; /* Kart genişliği */
+    height: 500px; /* Kart yüksekliği */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+    text-align: left; /* İçerik sola hizalanır */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* İçeriği kartın içinde dikeyde dengeler */
+}
+
+.card h1 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #000000; /* Başlık rengi siyah */
+}
+
+.card img {
+    width: 100%; /* Görselin genişliği kartla aynı olur */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #333333; /* Metin rengi koyu gri */
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Hero product Section Stil */
+.hero-section-product {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+.hero-content-product h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-content-product p {
+    font-size: 1.2em;
 }

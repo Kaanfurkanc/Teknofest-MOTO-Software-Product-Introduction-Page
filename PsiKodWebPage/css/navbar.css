@@ -1,23 +1,23 @@
-/* Navbar Stil */
 header {
     background-color: #ffffff;
     color: #000000;
-    padding: 30px 0;
-    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
     position: fixed; /* Navbar sabitleniyor */
     top: 0; /* Sayfanın üst kısmında sabitlenir */
     width: 100%; /* Genişlik tam ekran olur */
     z-index: 1000; /* Navbar diğer içeriklerin üstünde kalır */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekleyerek daha belirgin hale getirilir */
+    box-shadow: none; /* Gölgeyi kaldırmak için */
+    border-bottom: none; /* Çizgiyi kaldırmak için */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
+    border-bottom: none; /* Çizgiyi kaldırmak için */
 }
 
 .logo-container {

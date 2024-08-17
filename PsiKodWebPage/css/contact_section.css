@@ -1,41 +1,133 @@
-/* Contact Form Stil */
-.contact-section form {
-    max-width: 500px;
+/* Contact Section Stil */
+.contact-section {
+    padding: 60px 20px;
+    max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-info p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: flex; /* İkon ve metni yan yana hizalamak için */
+    align-items: center;
+}
+
+.contact-info ul li img {
+    margin-right: 10px; /* İkon ile metin arasındaki boşluk */
+    width: 20px; /* İkon boyutu */
+    height: 20px; /* İkon boyutu */
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
     display: flex;
     flex-direction: column;
 }
 
-.contact-section label {
+.contact-form label {
     margin: 10px 0 5px;
+    font-size: 1em;
+    color: #333;
+    display: none;
 }
 
-.contact-section input, .contact-section textarea {
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: #999; /* Placeholder rengini ayarla */
+    font-size: 1em;
+}
+
+.contact-form input, .contact-form textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
 }
 
-.contact-section button {
-    padding: 10px;
+.contact-form input, 
+.contact-form textarea {
+    height: auto; /* Başlangıç yüksekliğini otomatik yap */
+    overflow-y: hidden; /* Alanın boyutu arttıkça kaydırma çubuğunu gizle */
+    padding: 15px; /* Padding değerini koru */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9; /* Arka plan rengi açık gri */
+    resize: none; /* Kullanıcının manuel olarak boyutu değiştirmesini engelle */
+}
+
+.contact-form .terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-form .terms label {
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.contact-form button {
+    padding: 15px 30px; /* Butonun padding değerini artırdık */
     border: none;
-    background-color: #333;
+    border-radius: 5px;
+    background-color: #800780; /* Buton arka planı */
     color: #fff;
+    font-size: 1.2em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 155px; /* Butonun genişliğini ayarla */
 }
 
-.contact-section button:hover {
-    background-color: #555;
-}
-
-/* Responsive Stil */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2em;
-    }
-
-    .product-gallery div, .team-gallery div {
-        flex-basis: 100%;
-    }
+.contact-form button:hover {
+    background-color: #7b1fa2; /* Hover durumunda buton rengi */
 }
