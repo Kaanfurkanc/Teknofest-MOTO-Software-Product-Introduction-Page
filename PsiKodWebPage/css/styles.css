@@ -1,0 +1,9 @@
+/* Genel ayarlar ve layout */
+@import url('/css/reset.css'); /* Varsayılan tarayıcı stillerini sıfırlamak için */
+@import url('/css/navbar.css');
+@import url('/css/hero_section.css');
+@import url('/css/mission_vision_section.css');
+@import url('/css/product_section.css');
+@import url('/css/general.css');
+@import url('/css/contact_section.css');
+@import url('/css/footer.css');

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern, responsive web page showcasing our products and team.">
+    <title>Company Name</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1><span id="hero-text">Innovative Psychology Software</span></h1>
+                <p>Your one-stop solution for innovative products.</p>
+            </div>
+        </section>
+
+        <!-- Mission & Vision Section -->
+        <section class="mission-vision-section">
+            <div class="container">
+                <div class="mission-vision-content">
+                    <h2>Our Mission & Vision</h2>
+                    <p><strong>At PsiKod, we are dedicated to revolutionizing psychology through innovative software solutions.</strong> Our mission is to empower psychologists with tools that enhance their practice and improve patient outcomes, ensuring accessibility and effectiveness.</p>
+                </div>
+                <div class="mission-vision-grid">
+                    <div class="image-container">
+                        <img src="/images/vision_part_team_photo.png" alt="Team Image">
+                    </div>
+                    <div class="grid-content">
+                        <div class="grid-item">
+                            <h3>10 team members</h3>
+                            <p>Our diverse team combines expertise from various disciplines, including software engineering, psychology, and data science, to create impactful solutions that bridge the gap between technology and mental health.</p>
+                        </div>
+                        <div class="grid-item">
+                            <h3>2023 year founded</h3>
+                            <p>Founded at Teknofest, PsiKod emerged with a vision to innovate in the field of psychology, striving to create user-friendly digital tools that enhance the practice of mental health professionals.</p>
+                        </div>
+                        <div class="grid-item">
+                            <h3>5 products developed</h3>
+                            <p>Our flagship product, MOTO, exemplifies our commitment to providing effective digital solutions for psychologists, enhancing their ability to support patients through technology.</p>
+                        </div>
+                        <div class="grid-item">
+                            <h3>3 core values</h3>
+                            <p>We uphold values of <strong>innovation, collaboration, and integrity</strong>, ensuring that our work not only meets the highest standards but also fosters trust and transparency with our clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <h2>Ürünlerimiz</h2>
+            <div class="product-gallery">
+                <!-- Product items will go here -->
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team-section">
+            <h2>Ekibimiz</h2>
+            <div class="team-gallery">
+                <!-- Team members will go here -->
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('/Pages/shared/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+        fetch('/Pages/shared/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>

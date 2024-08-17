@@ -1,0 +1,16 @@
+/* Products Section Stil */
+.products-section, .team-section, .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.product-gallery, .team-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-gallery div, .team-gallery div {
+    margin: 15px;
+    flex-basis: 30%;
+}

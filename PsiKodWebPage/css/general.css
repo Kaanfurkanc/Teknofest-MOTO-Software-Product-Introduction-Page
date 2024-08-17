@@ -1,0 +1,8 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 100px; /* Navbar'ın yüksekliğine bağlı olarak sayfanın üst kısmında boşluk bırakıldı */
+}

@@ -1,0 +1,92 @@
+/* Navbar Stil */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+    position: fixed; /* Navbar sabitleniyor */
+    top: 0; /* Sayfanın üst kısmında sabitlenir */
+    width: 100%; /* Genişlik tam ekran olur */
+    z-index: 1000; /* Navbar diğer içeriklerin üstünde kalır */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekleyerek daha belirgin hale getirilir */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    max-height: 80px;
+    margin-right: 15px;
+}
+
+.logo-container a {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.cta-buttons .btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+    background-color: #6a1b9a;
+    color: #fff;
+}
+
+.cta-buttons .btn-primary:hover {
+    background-color: #7b1fa2;
+}
+
+.cta-buttons .btn-secondary {
+    background-color: #f5f5f5;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: #e0e0e0;
+}
