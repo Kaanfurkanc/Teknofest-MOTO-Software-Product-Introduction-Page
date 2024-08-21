@@ -1,0 +1,106 @@
+.team-section {
+    background-color: #ffffff;
+    padding: 40px 20px; /* Üstteki padding'i koruyoruz */
+    text-align: left; /* Tüm bölümdeki metinleri sola yaslar */
+}
+
+.team-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: calc(18% + 15px); /* İlk resmin sol kenarına hizalamak için */
+}
+
+.team-section p {
+    color: #333;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: calc(18% + 15px); /* İlk resmin sol kenarına hizalamak için */
+}
+
+.team-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Kartları yatayda aralıklı yerleştirir */
+    gap: 10px; /* Kartlar arasındaki boşlukları ayarlar */
+    max-width: 1200px;
+    margin: 0 auto; /* Galeriyi ortalar */
+}
+.team-member:nth-last-child(2) {
+    margin-left: calc(25% + 5px); /* İlk sıranın sonundaki boşluğu kullanarak hizala */
+}
+
+.team-member:nth-last-child(1) {
+    margin-right: calc(25% + 5px); /* İlk sıranın sonundaki boşluğu kullanarak hizala */
+}
+
+.team-member {
+    flex: 0 1 calc(23% - 15px); /* Her bir kartın genişliğini hesaplar ve ayarlar */
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.team-member img {
+    width: 85%; /* Resimleri biraz küçültebilirsiniz */
+    height: 275px; /* Görsel yüksekliğini koruyun */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    object-fit: bold;
+    color: #555; /* Açıklama metni rengi */
+    margin-left: 0;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 32px; /* Logoların tutarlı olması için boyutlandırma */
+    height: 32px;
+    object-fit: contain; 
+}
+
+.team_first-section {
+    background-color: #252424; /* Arka plan beyaz */
+    padding: 60px 20px;
+}
+
+.team_first-content {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.team_first-content h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.team_first-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+}

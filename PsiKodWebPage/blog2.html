@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern, responsive web page showcasing our products and team.">
+    <title>PsiKod</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <a href="javascript:history.back()" class="back-button">← Geri</a>
+        <section class="article-card">
+            
+            <div class="article-header">
+                <h1>MOTO İle Oyun Terapisinde Çığır Aşan Devrim</h1>
+            </div>
+            <div class="article-content">
+                <p>
+                    MOTO projesinin ikinci bileşeni olan MOTO Portal, danışan yönetiminde devrim niteliğinde yenilikler sunan bir platform olarak karşımıza çıkıyor. MOTO Portal'ı rakiplerinden ayıran en önemli özellik, sadece danışan ve randevu takibi gibi temel yönetim işlevlerini sağlamakla kalmayıp, terapistlere inovatif çözümler sunarak onlara yeni imkanlar tanımasıdır. Portal, MOTO projesinin benzersiz bir uzantısı olarak, kendi mobil oyun odasıyla entegre şekilde çalışarak terapi sürecine değer katmaktadır.
+                </p>
+                <h2>İnovatif Seans Yönetimi</h2>
+                <p>
+                    MOTO Portal'da, terapist her danışan için özel olarak oluşturulmuş seans sayfalarıyla seans akışını kolaylıkla yönetebilir. Bu yenilikçi seans sayfaları, terapistlere önceki seanslarla ilgili bilgilere hızla erişim, test sonuçlarını inceleme, seans sayılarını görüntüleme ve anamnez bilgilerini özetlenmiş halde görme imkanı sunar. Terapist, danışanın geliş nedeni ve terapi amacını tek cümleyle özetleyebilir ve bu bilgiler ışığında seanslarını daha verimli bir şekilde planlayabilir.
+                </p>
+                <h2>MOTO ile Entegre Çalışma</h2>
+                <p>
+                    MOTO Portal, MOTO'nun mobil oyun odasıyla tamamen entegre çalışır. Terapistler, oyun odasında elde ettikleri izlenimlere uygun testleri veya ölçekleri danışanlarına uygulayabilirler. Portalda yer alan online testler ve ölçekler, terapistlerin seans akışını daha işlevsel hale getirmek üzere özenle seçilmiştir. Bu sayede, terapistler oyun odasından aldıkları verileri doğrulamak ve seanslarını en etkili şekilde yönlendirmek için MOTO Portal'daki araçları kullanabilirler.
+                </p>
+                <h2>Terapistlerin Zamanını Değerli Kılan Çözümler</h2>
+                <p>
+                    MOTO Portal'ın geliştirilmesindeki temel amaç, terapistlerin zamandan tasarruf etmesini ve seans akışını daha etkin bir şekilde yönetmelerini sağlamaktır. Portal, terapistlerin mobil oyun odasındaki oyunlar ve tekniklerden elde edilen bilgileri analiz ederek seans gidişatını planlamalarına yardımcı olur. Bu yenilikçi yaklaşım, mevcut çözümlere yeni bir soluk getirirken, terapistlerin iş yükünü hafifletir ve seans süreçlerini optimize eder.
+                </p>
+                <h2>Sonuç</h2>
+                <p>
+                    MOTO Portal, terapistlerin iş süreçlerini kolaylaştırmak, zamandan tasarruf sağlamak ve danışanlarla olan etkileşimlerini derinleştirmek için tasarlanmış yenilikçi bir platformdur. Terapistler için sunulan bu çözümler, terapi süreçlerine yeni bir boyut kazandırıyor. MOTO Portal ile tanışarak, siz de danışan yönetiminde fark yaratabilir, seanslarınızı daha verimli hale getirebilirsiniz.
+                </p>
+            </div>
+            <div class="article-author">
+                <img src="/images/team/zehra.jpg" alt="Author Photo">
+                <div class="author-info">
+                    <h4>Zehra Nur Dalcalı</h4>
+                    <p>Psikolog</p>
+                    <p>21 Ağustos 2024</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('/Pages/shared/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+        fetch('/Pages/shared/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+</body>
+</html>
