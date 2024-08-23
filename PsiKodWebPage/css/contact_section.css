@@ -120,7 +120,7 @@
     padding: 15px 30px; /* Butonun padding değerini artırdık */
     border: none;
     border-radius: 5px;
-    background-color: #481ac7; /* Buton arka planı */
+    background-color: #0058bd; /* Buton arka planı */
     color: #fff;
     font-size: 1.2em;
     cursor: pointer;
@@ -129,5 +129,5 @@
 }
 
 .contact-form button:hover {
-    background-color: #5d20beec; /* Hover durumunda buton rengi */
+    background-color: #092a83ec; /* Hover durumunda buton rengi */
 }

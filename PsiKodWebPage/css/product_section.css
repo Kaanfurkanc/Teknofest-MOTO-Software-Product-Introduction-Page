@@ -1,73 +1,194 @@
-/* Products Section Stil */
-.products-section {
-    background-color: #101111; /* Arka plan siyah */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.products-section h2 {
-    color: #ffffff; /* Başlık yazısı beyaz */
-    margin-bottom: 40px;
-    font-size: 2.5em; /* Başlığı daha büyük yapar */
-    font-weight: bold; /* Başlığı daha kalın yapar */
-}
-
-.product-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px; /* Kartlar arasındaki boşluk */
-}
-
-.card {
-    background-color: #ffffff; /* Kart arka planı beyaz */
-    border-radius: 8px;
-    padding: 20px;
-    width: 400px; /* Kart genişliği */
-    height: 500px; /* Kart yüksekliği */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
-    text-align: left; /* İçerik sola hizalanır */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* İçeriği kartın içinde dikeyde dengeler */
-}
-
-.card h1 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #000000; /* Başlık rengi siyah */
-}
-
-.card img {
-    width: 100%; /* Görselin genişliği kartla aynı olur */
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.card p {
-    font-size: 1em;
-    color: #333333; /* Metin rengi koyu gri */
-    line-height: 1.6;
-    flex-grow: 1;
-}
-
-/* Hero product Section Stil */
-.hero-section-product {
-    background-image: url('');
+/* Products hero Section Stil */
+.product-hero {
+    background-image: url('/images/product_hero.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
     text-align: center;
     padding: 100px 20px;
-    min-height: 100vh;
+    min-height: 70vh;
 }
 
-.hero-content-product h1 {
+.product-hero-content h1 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    text-align: left;
+    margin-bottom: 15px;
+    color: #000000;
+    font-weight: bold;
+    width: 50%;
+    margin-left: 90px;
+    margin-top: 55px;
 }
 
-.hero-content-product p {
+.product-hero-content p {
     font-size: 1.2em;
+    text-align: left;
+    width: 35%;
+    color: #000000;
+    margin-left: 90px;
+    margin-top: 55px;
+}
+
+.hero-buttons-product {
+    margin-top: 220px;
+}
+
+.hero-buttons-product .btn {
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.hero-buttons-product .btn-primary {
+    background-color: #0058bd;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.hero-buttons-product .btn-primary:hover {
+    opacity: 0.9; /* Fareyle üzerine gelindiğinde şeffaflaşır */
+}
+
+
+/* Products Section Stil */
+.products-section {
+    background-color: #0a1058; /* Arka plan rengi */
+    padding: 50px 20px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.products-section h2 {
+    color: #ffffff; /* Başlık yazısı beyaz */
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.product-gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    justify-content: center; /* Section ortalandı */
+    position: relative;
+    gap: 20px; /* Kartlar arasındaki boşluk */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 37%; /* Kart genişliği */
+    height: 380px; /* Kart yüksekliği */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* İçeriği dikeyde hizalamak için column ayarı */
+    align-items: center; /* H1 başlığını ortalamak için kullanıldı */
+    transition: transform 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.card.active {
+    transform: scale(1) translateX(0); /* Aktif kart tam boyutta ve tam konumunda */
+    z-index: 10; /* Üstte görünmesi için z-index değeri verildi */
+}
+
+.card.inactive {
+    transform: scale(0.8) translateX(20px); /* Inactive kart daha küçük ve sağa kaydırılmış */
+    z-index: 8; /* Arka planda görünmesi için z-index değeri verildi */
+    opacity: 0.8; /* Inactive kart biraz şeffaf olacak */
+    cursor: pointer; /* Inactive kartlara tıklanabilirlik işareti */
+}
+
+.card h1 {
+    font-size: 1.8em;
+    color: #000000;
+    margin-bottom: 20px; /* H1 ile diğer içerikler arasında boşluk */
+    text-align: center;
+    align-self: center; /* H1'i yatayda kartın ortasına hizaladık */
+}
+
+.card-content {
+    display: flex; /* Görsel ve paragrafı yatayda hizalamak için flexbox */
+    width: 100%; /* İçeriğin kart genişliğine yayılması için */
+    justify-content: space-between; /* Görsel ve paragrafı iki tarafa yaymak için */
+    align-items: center; /* Görsel ve paragrafı dikeyde ortalamak için */
+}
+
+.card img {
+    width: 55%; /* Görsel genişliği */
+    height: 100%;
+    border-radius: 8px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #333333;
+    line-height: 1.6;
+    width: 55%; /* Paragraf genişliği */
+    margin-left: 20px;
+}
+
+/* Dots Stil */
+.dots-container {
+    margin-top: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* You tube tanıtım videosu kısmı */
+
+.moto-video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Arka plan rengi */
+}
+
+.moto-video-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Başlık boyutu */
+    color: #000000; /* Başlık rengi */
+    font-weight: bold; /* Kalın yazı */
+}
+
+.video-container {
+    position: relative;
+    width: 80%; /* Genişliği ayarlayarak boyutlandırma */
+    max-width: 800px; /* Maksimum genişlik */
+    padding-bottom: 27.25%; /* 16:9 oranında yer tutucu */
+    height: 0;
+    overflow: hidden;
+    background-color: #000; /* Video çerçevesi arka plan rengi */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Çerçeve kenarlığını kaldır */
 }

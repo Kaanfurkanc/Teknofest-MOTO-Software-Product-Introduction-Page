@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Modern, responsive web page showcasing our products and team.">
-    <title>Company Name</title>
+    <title>PsiKod</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-
-
 </head>
 <body>
     <div id="header-placeholder"></div>
@@ -18,7 +15,7 @@
         <section id="home" class="hero-section">
             <div class="hero-content">
                 <h1><span id="hero-text">Psikoloji Alanında Yenilikçi Yazılımlar</span></h1>
-                <p>MOTO, psikologlar için tasarlanmış yenilikçi bir yazılım çözümüdür. Gelişmiş araçlarımız ve özelliklerimizle terapötik sürecinizi kolaylaştırın ve danışanlarınıza daha fazla odaklanın.</p>
+                <p>PsiKod, psikologlar için yenilikçi yazılım çözümleri geliştiren bir teknoloji takımıdır. Ürünlerimiz ile psikoloji endüstrisinde devrim yaratmayı hedefliyoruz.</p>
                 <div class="hero-buttons">
                     <a href="/product.html" class="btn btn-primary">Ürünlerimiz</a>
                     <a href="/contact.html" class="btn btn-secondary">İletişim</a>
@@ -46,11 +43,11 @@
                         </div>
                         <div class="grid-item">
                             <h3>2022 yılında kuruldu</h3>
-                            <p>2022 yılında Teknofest yarışmalarına katılma hareketiyle kurulan PsiKod, psikoloji alanında yenilikler yapma vizyonuyla yola çıktı ve zihinsel sağlık profesyonellerinin çalışmalarını geliştiren kullanıcı dostu dijital araçlar oluşturmayı hedeflemektedir. PsiKod, bu vizyon doğrultusunda bir startup olma yolunda hızla ilerlemektedir.</p>
+                            <p>PsiKod, 2022 yılında Teknofest yarışmalarına katılmak amacıyla kuruldu ve psikoloji alanında yenilikler yapma vizyonuyla yola çıktı. Zihinsel sağlık profesyonellerinin çalışmalarını geliştiren kullanıcı dostu dijital araçlar oluşturmayı hedefleyen PsiKod, bu vizyon doğrultusunda bir startup olma yolunda hızla ilerlemektedir.</p>
                         </div>
                         <div class="grid-item">
                             <h3>2 geliştirilen ürün</h3>
-                            <p><strong> MOTO ve MOTO Portal</strong>, psikologların teknolojiyi kullanarak danışanlarına daha etkili destek sunmalarını ve terapi süreçlerini daha verimli yönetmelerini sağlayan dijital çözümlerimizdir.</p>
+                            <p><strong> MOTO Oyun ve MOTO Portal</strong>, psikologların teknolojiyi kullanarak danışanlarına daha etkili destek sunmalarını ve terapi süreçlerini daha verimli yönetmelerini sağlayan dijital çözümlerimizdir.</p>
                         </div>
                         <div class="grid-item">
                             <h3>3 temel değer</h3>
@@ -65,16 +62,24 @@
         <section id="products" class="products-section">
             <h2>Ürünlerimiz</h2>
             <div class="product-gallery">
-                <div class="card">
-                    <h1>MOTO</h1>
-                    <img src="/images/MOTO_Game.jpg" alt="MOTO Product Image">
-                    <p>Our MOTO app is a gamified mental health platform that allows users to track their mood, set goals, and access resources to improve their mental well-being.</p>
+                <div class="card active">
+                    <h1>MOTO Oyun</h1>
+                    <div class="card-content">
+                        <img src="/images/MOTO/MOTO_game_logo.png" alt="MOTO Product Image">
+                        <p>MOTO Oyun, gerçek dünyadaki fiziki oyun odalarından esinlenilerek oluşturulan, ÇMOT(Çocuk Merkezli Oyun Terapisi) ekolü çerçevesinde inşa edilen, içerisinde bir çok oyunlaştırılmış terapi yönteminin yer aldığı 3 boyutlu mobil oyundur.</p>
+                    </div>
                 </div>
-                <div class="card">
+                <div class="card inactive">
                     <h1>MOTO Portal</h1>
-                    <img src="/images/MOTOPortal.png" alt="MOTO Product Image">
-                    <p>Our MOTO Portal is a web-based platform that allows psychologists to access patient data, track progress, and communicate with clients in a secure and user-friendly environment.</p>
+                    <div class="card-content">
+                        <img src="/images/MOTO/MOTOPortal1.jpg" alt="MOTO Portal Product Image">
+                        <p>MOTO Portal, MOTO Oyun ile entegre çalışan, seans araçlarını içeren, online seans yapma imkanı sunan ve kolay danışan yönetimi sağlayan, psikologlar için geliştirilmiş kullanıcı dostu ve yapay zeka destekli bir yönetim uygulamasıdır. MOTO Portal, genel seans sürecindeki elde edilen verileri etkli analiz etme imkanı sağlar.</p>
+                    </div>
                 </div>
+            </div>
+            <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
             </div>
         </section>
         
@@ -134,7 +139,7 @@
                 <div class="team-member">
                     <img src="/images/team/sefa.jpg" alt="Mehmet Sefa Karataş">
                     <h3>Mehmet Sefa Karataş</h3>
-                    <p>Oyun Geliştirici</p>
+                    <p>Oyun/Yazılım Geliştirici</p>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/mesekara/" target="_blank"><img src="/images/SocialMediaIcons/icons8-linkedin-100.png" alt="LinkedIn"></a>
                     </div>
@@ -169,6 +174,42 @@
 
     </main>
     <script src="script.js"></script>
+    <script>
+        const dots = document.querySelectorAll('.dot');
+        const cards = document.querySelectorAll('.card');
+        let currentIndex = 0;
+
+        function changeCard(index) {
+            if (index !== currentIndex) {
+                // Eski aktif kartı inaktif yap
+                cards[currentIndex].classList.remove('active');
+                cards[currentIndex].classList.add('inactive');
+
+                // Yeni aktif kartı aktif yap
+                cards[index].classList.remove('inactive');
+                cards[index].classList.add('active');
+
+                // Dot'ları güncelle
+                dots[currentIndex].classList.remove('active');
+                dots[index].classList.add('active');
+
+                // Yeni index'i ayarla
+                currentIndex = index;
+            }
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                changeCard(index);
+            });
+        });
+
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                changeCard(index);
+            });
+        });
+    </script>
     <div id="footer-placeholder"></div>
     <script>
         fetch('/Pages/shared/header.html')

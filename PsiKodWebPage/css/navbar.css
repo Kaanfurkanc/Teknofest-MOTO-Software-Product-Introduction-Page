@@ -21,13 +21,16 @@ nav {
 }
 
 .logo-container {
-    display: flex;
+    display:flex;
     align-items: center;
+    text-align: left;
+    margin-right: 60px;
 }
 
 .logo-container img {
-    max-height: 60px; /* Logonun yüksekliğini kontrol eder */
+    max-height: 110px; /* Logonun yüksekliğini kontrol eder */
     margin-right: 10px;
+    margin-top: 15px;
 }
 
 .logo-container a {
@@ -73,7 +76,7 @@ nav ul li a {
 }
 
 .cta-buttons .btn-primary {
-    background-color: #481ac7;
+    background-color: #0058bd;
     color: #fff;
     padding: 12px 40px; /* Butonu genişletir */
     border-radius: 5px;
@@ -90,7 +93,7 @@ nav ul li a {
 }
 
 .cta-buttons .btn-primary:hover {
-    background-color: #5d20beec;
+    background-color: #092a83ec;
 }
 
 .cta-buttons .btn-secondary {

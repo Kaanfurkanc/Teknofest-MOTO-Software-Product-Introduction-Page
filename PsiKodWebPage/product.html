@@ -4,45 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Modern, responsive web page showcasing our products and team.">
-    <title>Company Name</title>
+    <title>PsiKod</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/product_section.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-
-
 </head>
 <body>
     <div id="header-placeholder"></div>
 
     <main>
-        <section id="home" class="hero-section-product">
-            <div class="hero-content-product">
-                <h1><span id="hero-text">Innovative Psychology Software</span></h1>
-                <p>Your one-stop solution for innovative products.</p>
+        <section id="product" class="product-hero">
+            <div class="product-hero-content">
+                <h1><span id="product-hero-text">Yenilikçi Yazılım Çözümlerimiz İle Terapi Süreçlerinizden Optimum Verim Alın</span></h1>
+                <p>MOTO Oyun ve MOTO Portal, psikologlar için tasarlanmış yenilikçi bir yazılım çözümüdür. Gelişmiş yapay zeka destekli araçlarımız ve özelliklerimizle terapötik sürecinizi kolaylaştırın ve daha etkili seans yönetimi uygulayın.</p>
+                <div class="hero-buttons-product">
+                    <a href="/contact.html" class="btn btn-primary">İletişim</a>
+                </div>
             </div>
         </section>
         <section id="products" class="products-section">
             <h2>Ürünlerimiz</h2>
             <div class="product-gallery">
-                <div class="card">
-                    <h1>MOTO</h1>
-                    <img src="/images/MOTO_Game.jpg" alt="MOTO Product Image">
-                    <p>Our MOTO app is a gamified mental health platform that allows users to track their mood, set goals, and access resources to improve their mental well-being.</p>
+                <div class="card active">
+                    <h1>MOTO Oyun</h1>
+                    <div class="card-content">
+                        <img src="/images/MOTO/MOTO_game_logo.png" alt="MOTO Product Image">
+                        <p>MOTO, gerçek dünyadaki fiziki oyun odalarından esinlenilerek oluşturulan, ÇMOT(Çocuk Merkezli Oyun Terapisi) ekolü çerçevesinde inşa edilen, içerisinde bir çok oyun yönteminin yer aldığı 3 boyutlu mobil oyundur. MOTO, psikologlar için dijital oyun terapisi yapma imkanını sunmaktadır.</p>
+                    </div>
                 </div>
-                <div class="card">
+                <div class="card inactive">
                     <h1>MOTO Portal</h1>
-                    <img src="/images/MOTOPortal.png" alt="MOTO Product Image">
-                    <p>Our MOTO Portal is a web-based platform that allows psychologists to access patient data, track progress, and communicate with clients in a secure and user-friendly environment.</p>
+                    <div class="card-content">
+                        <img src="/images/MOTO/MOTOPortal1.jpg" alt="MOTO Portal Product Image">
+                        <p>MOTO Portal, MOTO ile entegre çalışan, seans araçlarını içeren, online seans yapma imkanı sunan ve kolay danışan yönetimi sağlayan, psikologlar için geliştirilmiş kullanıcı dostu ve yapay zeka destekli bir yönetim uygulamasıdır. MOTO Portal, genel seans sürecindeki elde edilen verileri etkli analiz etme imkanı sağlar.</p>
+                    </div>
                 </div>
             </div>
+            <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
         </section>
-        <section >
-
-
+        <section id="youtubevideo" class="moto-video-section">
+            <h2>MOTO Oyun Tanıtım Videosu</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iNr6pk_yCI8" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
+        
     </main>
     <script src="script.js"></script>
     <div id="footer-placeholder"></div>
+    <script>
+        const dots = document.querySelectorAll('.dot');
+        const cards = document.querySelectorAll('.card');
+        let currentIndex = 0;
+
+        function changeCard(index) {
+            if (index !== currentIndex) {
+                // Eski aktif kartı inaktif yap
+                cards[currentIndex].classList.remove('active');
+                cards[currentIndex].classList.add('inactive');
+
+                // Yeni aktif kartı aktif yap
+                cards[index].classList.remove('inactive');
+                cards[index].classList.add('active');
+
+                // Dot'ları güncelle
+                dots[currentIndex].classList.remove('active');
+                dots[index].classList.add('active');
+
+                // Yeni index'i ayarla
+                currentIndex = index;
+            }
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                changeCard(index);
+            });
+        });
+
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                changeCard(index);
+            });
+        });
+    </script>
     <script>
         fetch('/Pages/shared/header.html')
             .then(response => response.text())
