@@ -1,107 +1,49 @@
-header {
-    background-color: #ffffff;
+/* Navbar düzenlemeleri */
+.navbar {
+    padding: 1.5rem 2.5rem; /* Navbar yüksekliğini artırdık */
+}
+
+.navbar-brand img {
+    max-height: 110px; /* Logonun yüksekliğini biraz daha artırdık */
+    margin-top: 0;
+}
+
+.navbar-nav .nav-link {
     color: #000000;
-    padding: 10px 0;
-    position: fixed; /* Navbar sabitleniyor */
-    top: 0; /* Sayfanın üst kısmında sabitlenir */
-    width: 100%; /* Genişlik tam ekran olur */
-    z-index: 1000; /* Navbar diğer içeriklerin üstünde kalır */
-    box-shadow: none; /* Gölgeyi kaldırmak için */
-    border-bottom: none; /* Çizgiyi kaldırmak için */
+    font-size: 1.3em; /* Yazı boyutunu biraz daha artırdık */
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 20px; /* Linkler arasındaki boşlukları biraz daha artırdık */
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    height: 100px; /* Navbar yüksekliği */
-}
-
-.logo-container {
-    display:flex;
-    align-items: center;
-    text-align: left;
-    margin-right: 60px;
-}
-
-.logo-container img {
-    max-height: 110px; /* Logonun yüksekliğini kontrol eder */
-    margin-right: 10px;
-    margin-top: 15px;
-}
-
-.logo-container a {
-    font-size: 2.5em; /* Yazı boyutu */
-    font-weight: bold; /* Kalın yazı */
-    color: #000000; /* Yazı rengi */
-    text-decoration: none; /* Alt çizgiyi kaldırmak için */
-    font-family: 'Pacifico', cursive; /* El yazısı font */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-family: 'Open Sans', sans-serif; 
-}
-
-.cta-buttons {
-    display: flex;
-    align-items: center;
-}
-
-.cta-buttons .btn {
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.cta-buttons .btn-primary {
+.btn-primary {
     background-color: #0058bd;
-    color: #fff;
-    padding: 12px 40px; /* Butonu genişletir */
+    padding: 12px 35px; /* Buton boyutunu biraz daha artırdık */
     border-radius: 5px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 1.1em; /* Buton yazı boyutunu biraz daha artırdık */
 }
 
-.cta-buttons .btn-primary img {
-    width: 40px; /* İkonun boyutunu küçültür */
-    height: 40px;
-    margin-right: 1px; /* İkon ile text arasında boşluk bırakır */
-}
-
-.cta-buttons .btn-primary:hover {
+.btn-primary:hover {
     background-color: #092a83ec;
 }
 
-.cta-buttons .btn-secondary {
-    background-color: #f5f5f5;
-    color: #333;
-    border: 1px solid #ccc;
+/* Responsive düzenlemeler */
+@media (min-width: 992px) {
+    .navbar {
+        padding: 2rem 4rem; /* Daha geniş ekranlar için navbar yüksekliğini artırdık */
+    }
+    .navbar-nav {
+        margin: 0 auto; /* Navbar içeriklerini ortaladı */
+    }
 }
 
-.cta-buttons .btn-secondary:hover {
-    background-color: #e0e0e0;
+@media (max-width: 991px) {
+    .navbar-brand img {
+        max-height: 90px; /* Mobilde logo daha büyük */
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.2em; /* Mobilde link yazı boyutunu biraz daha artırdık */
+    }
+    .btn-primary {
+        padding: 10px 30px; /* Mobilde buton boyutunu artırdık */
+    }
 }

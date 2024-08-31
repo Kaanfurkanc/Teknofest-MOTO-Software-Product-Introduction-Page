@@ -1,14 +1,15 @@
+/* Genel Stiller */
 .team-section {
     background-color: #ffffff;
-    padding: 40px 20px; /* Üstteki padding'i koruyoruz */
-    text-align: left; /* Tüm bölümdeki metinleri sola yaslar */
+    padding: 40px 20px;
+    text-align: left;
 }
 
 .team-section h2 {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: calc(18% + 15px); /* İlk resmin sol kenarına hizalamak için */
+    margin-left: calc(18% + 15px);
 }
 
 .team-section p {
@@ -16,35 +17,28 @@
     font-size: 1.2em;
     margin-top: 0;
     margin-bottom: 20px;
-    margin-left: calc(18% + 15px); /* İlk resmin sol kenarına hizalamak için */
+    margin-left: calc(18% + 15px);
 }
 
 .team-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Kartları yatayda aralıklı yerleştirir */
-    gap: 10px; /* Kartlar arasındaki boşlukları ayarlar */
+    justify-content: space-between;
+    gap: 10px;
     max-width: 1200px;
-    margin: 0 auto; /* Galeriyi ortalar */
-}
-.team-member:nth-last-child(2) {
-    margin-left: calc(25% + 5px); /* İlk sıranın sonundaki boşluğu kullanarak hizala */
-}
-
-.team-member:nth-last-child(1) {
-    margin-right: calc(25% + 5px); /* İlk sıranın sonundaki boşluğu kullanarak hizala */
+    margin: 0 auto;
 }
 
 .team-member {
-    flex: 0 1 calc(23% - 15px); /* Her bir kartın genişliğini hesaplar ve ayarlar */
+    flex: 0 1 calc(23% - 15px);
     text-align: center;
     color: #000;
     margin-bottom: 30px;
 }
 
 .team-member img {
-    width: 85%; /* Resimleri biraz küçültebilirsiniz */
-    height: 275px; /* Görsel yüksekliğini koruyun */
+    width: 85%;
+    height: 275px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -58,11 +52,14 @@
 .team-member p {
     font-size: 1em;
     margin-bottom: 10px;
-    object-fit: bold;
-    color: #555; /* Açıklama metni rengi */
-    margin-left: 0;
-    text-align: center;
+    color: #555;
+    text-align: center; /* Title metnini ortalar */
+    width: 100%; /* Title'ın tam genişlikte olmasını sağlar */
+    display: block; /* P etiketini blok öğesi yapar */
+    margin-left: auto;
+    margin-right: auto; /* Sol ve sağdan otomatik margin ile ortalama */
 }
+
 
 .social-icons {
     margin-top: 10px;
@@ -73,13 +70,14 @@
 }
 
 .social-icons img {
-    width: 32px; /* Logoların tutarlı olması için boyutlandırma */
+    width: 32px;
     height: 32px;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
+/* Team First Section */
 .team_first-section {
-    background-color: #0a1058; /* Arka plan beyaz */
+    background-color: #0a1058;
     padding: 60px 20px;
 }
 
@@ -103,4 +101,70 @@
     max-width: 800px;
     margin: 0 auto;
     color: #ffffff;
+}
+
+/* Media Queries */
+
+/* Tablet ve daha küçük ekranlar için */
+@media (max-width: 768px) {
+    .team-section h2,
+    .team-section p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .team-gallery {
+        justify-content: center;
+    }
+
+    .team-member {
+        flex: 0 1 calc(48% - 10px); /* Kart genişliğini %50'ye ayarladık */
+    }
+
+    .team-member img {
+        width: 100%; /* Görseli tam genişlikte göstermek için */
+        height: auto; /* Görselin yüksekliği otomatik ayarlanır */
+    }
+
+    .team_first-content h2 {
+        font-size: 2em; /* Başlığı küçült */
+    }
+
+    .team_first-content p {
+        font-size: 1em; /* Paragraf metnini küçült */
+    }
+}
+
+/* Mobil ekranlar için */
+@media (max-width: 480px) {
+    .team-member {
+        flex: 0 1 100%; /* Kartları tam genişlikte göster */
+        margin-bottom: 20px;
+    }
+
+    .team-member img {
+        width: 100%; /* Görseller tam genişlikte olur */
+        height: auto;
+    }
+
+    .team-member h3 {
+        font-size: 1.2em;
+    }
+
+    .team-member p {
+        font-size: 0.9em;
+    }
+
+    .social-icons img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .team_first-content h2 {
+        font-size: 1.8em; /* Başlığı küçült */
+    }
+
+    .team_first-content p {
+        font-size: 0.9em; /* Paragraf metnini küçült */
+    }
 }

@@ -1,37 +1,30 @@
-/* Hero Section Stil */
+/* Genel Stiller */
 .hero-section {
     background-image: url('/images/backgr.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: #fff;
-    text-align: center;
-    padding: 100px 20px;
     min-height: 85vh;
-}
-
-.hero-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
     padding-top: 125px;
 }
 
-.hero-content p {
-    font-size: 1.2em;
-    text-align: center;
-    width: 40%;
-    margin: 0 auto;
-}
-/* Butonlar için stil */
-.hero-buttons {
-    margin-top: 80px;
+.hero-content h1 {
+    font-size: 6em !important; /* Başlık boyutunu büyük ölçüde artırdık ve !important ile öncelikli yaptık */
+    margin-bottom: 10px;
+    padding-top: 120px;
 }
 
+.hero-content p {
+    font-size: 1.5em;
+    width: 60%; /* Metin genişliği biraz artırıldı */
+    margin: 0 auto;
+}
+
+/* Butonlar için stil */
 .hero-buttons .btn {
     padding: 12px 24px;
     border-radius: 5px;
-    text-decoration: none;
-    margin: 0 10px;
     font-size: 1.2em;
     font-weight: bold;
     transition: background-color 0.3s ease, opacity 0.3s ease;
@@ -44,22 +37,25 @@
 }
 
 .hero-buttons .btn-primary:hover {
-    opacity: 0.7; /* Fareyle üzerine gelindiğinde şeffaflaşır */
+    background-color: #0058bd; /* Arka plan rengini koyu mavi olarak değiştirdik */
+    color: #ffffff; /* Yazı rengini beyaz yaptık */
+    opacity: 1;
 }
 
 .hero-buttons .btn-secondary {
-    background-color: rgba(255, 255, 255, 0.7); /* Şeffaf bir arka plan */
+    background-color: rgba(255, 255, 255, 0.7);
     color: #000000;
     border: 1px solid #ffffff;
     opacity: 0.7;
 }
 
 .hero-buttons .btn-secondary:hover {
-    opacity: 1; /* Fareyle üzerine gelindiğinde netleşir */
+    opacity: 1;
     background-color: #ffffff;
+    color: #000000;
 }
-/* Hero Underline effect area*/
 
+/* Hero Underline effect */
 #hero-text {
     position: relative;
     display: inline-block;
@@ -72,10 +68,10 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -10px; /* Yazının altına biraz boşluk bıraktık */
+    bottom: -10px;
     width: 100%;
     height: 4px;
-    background-color: #ffffff; /* Alt çizginin rengi */
+    background-color: #ffffff;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.5s ease;
@@ -94,5 +90,60 @@
     100% {
         transform: scaleX(0);
         transform-origin: bottom left;
+    }
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 4em !important; /* Tablet için başlık boyutu artırıldı ve !important eklendi */
+        padding-top: 100px;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+        width: 80%; /* Tablet için metin genişliği artırıldı */
+    }
+
+    .hero-buttons {
+        margin-top: 60px;
+    }
+
+    .hero-buttons .btn {
+        padding: 10px 20px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 60px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 3em !important; /* Mobil için başlık boyutu artırıldı ve !important eklendi */
+        padding-top: 80px;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+        width: 100%; /* Mobil için metin genişliği artırıldı */
+    }
+
+    .hero-buttons {
+        margin-top: 40px;
+    }
+
+    .hero-buttons .btn {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+
+    #hero-text {
+        font-size: 2.5em !important; /* Mobil için başlık boyutu artırıldı ve !important eklendi */
     }
 }

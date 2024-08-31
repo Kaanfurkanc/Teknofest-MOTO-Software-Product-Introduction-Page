@@ -68,3 +68,61 @@
     font-size: 1em;
     line-height: 1.6;
 }
+
+/* Media Queries */
+
+/* Tablet ve daha küçük ekranlar için */
+@media (max-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr; /* Tek sütunlu grid */
+        grid-gap: 30px; /* Grid öğeleri arasındaki boşluğu küçült */
+    }
+
+    .grid-content {
+        grid-template-columns: 1fr; /* İçeriklerde tek sütun yapısı */
+    }
+
+    .grid-item {
+        width: 100%; /* Kartların tam genişlikte görünmesini sağlar */
+    }
+
+    .mission-vision-content h2 {
+        font-size: 2em; /* Başlık boyutunu küçült */
+    }
+
+    .mission-vision-content p {
+        font-size: 1.1em; /* Paragraf metnini küçült */
+    }
+}
+
+/* Mobil ekranlar için */
+@media (max-width: 480px) {
+    .mission-vision-section {
+        padding: 40px 15px; /* Kenar boşluklarını daralt */
+    }
+
+    .mission-vision-grid {
+        grid-template-columns: 1fr; /* Tek sütunlu grid */
+        grid-gap: 20px; /* Grid öğeleri arasındaki boşluğu daha da küçült */
+    }
+
+    .grid-item {
+        width: 100%; /* Kartların tam genişlikte görünmesini sağlar */
+    }
+
+    .mission-vision-content h2 {
+        font-size: 1.8em; /* Başlık boyutunu daha da küçült */
+    }
+
+    .mission-vision-content p {
+        font-size: 1em; /* Paragraf metnini daha da küçült */
+    }
+
+    .grid-item h3 {
+        font-size: 1.2em; /* Kart başlıklarını küçült */
+    }
+
+    .grid-item p {
+        font-size: 0.9em; /* Kart metinlerini küçült */
+    }
+}

@@ -8,6 +8,7 @@
     text-align: center;
     padding: 100px 20px;
     min-height: 70vh;
+    padding-top: 100px; 
 }
 
 .product-hero-content h1 {
@@ -51,13 +52,13 @@
 }
 
 .hero-buttons-product .btn-primary:hover {
-    opacity: 0.9; /* Fareyle üzerine gelindiğinde şeffaflaşır */
+    opacity: 0.9;
 }
 
 
-/* Products Section Stil */
+/* Genel Stiller */
 .products-section {
-    background-color: #0a1058; /* Arka plan rengi */
+    background-color: #0a1058;
     padding: 50px 20px;
     text-align: center;
     overflow: hidden;
@@ -65,7 +66,7 @@
 }
 
 .products-section h2 {
-    color: #ffffff; /* Başlık yazısı beyaz */
+    color: #ffffff;
     margin-bottom: 40px;
     font-size: 2.5em;
     font-weight: bold;
@@ -74,54 +75,54 @@
 .product-gallery {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    justify-content: center; /* Section ortalandı */
+    justify-content: center;
     position: relative;
-    gap: 20px; /* Kartlar arasındaki boşluk */
+    gap: 20px;
 }
 
 .card {
     background-color: #ffffff;
     border-radius: 8px;
     padding: 20px;
-    width: 37%; /* Kart genişliği */
-    height: 380px; /* Kart yüksekliği */
+    width: 37%;
+    height: 380px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     text-align: left;
     display: flex;
-    flex-direction: column; /* İçeriği dikeyde hizalamak için column ayarı */
-    align-items: center; /* H1 başlığını ortalamak için kullanıldı */
+    flex-direction: column;
+    align-items: center;
     transition: transform 0.5s ease-in-out, z-index 0.5s ease-in-out;
 }
 
 .card.active {
-    transform: scale(1) translateX(0); /* Aktif kart tam boyutta ve tam konumunda */
-    z-index: 10; /* Üstte görünmesi için z-index değeri verildi */
+    transform: scale(1) translateX(0);
+    z-index: 10;
 }
 
 .card.inactive {
-    transform: scale(0.8) translateX(20px); /* Inactive kart daha küçük ve sağa kaydırılmış */
-    z-index: 8; /* Arka planda görünmesi için z-index değeri verildi */
-    opacity: 0.8; /* Inactive kart biraz şeffaf olacak */
-    cursor: pointer; /* Inactive kartlara tıklanabilirlik işareti */
+    transform: scale(0.8) translateX(20px);
+    z-index: 8;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 .card h1 {
     font-size: 1.8em;
     color: #000000;
-    margin-bottom: 20px; /* H1 ile diğer içerikler arasında boşluk */
+    margin-bottom: 20px;
     text-align: center;
-    align-self: center; /* H1'i yatayda kartın ortasına hizaladık */
+    align-self: center;
 }
 
 .card-content {
-    display: flex; /* Görsel ve paragrafı yatayda hizalamak için flexbox */
-    width: 100%; /* İçeriğin kart genişliğine yayılması için */
-    justify-content: space-between; /* Görsel ve paragrafı iki tarafa yaymak için */
-    align-items: center; /* Görsel ve paragrafı dikeyde ortalamak için */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card img {
-    width: 55%; /* Görsel genişliği */
+    width: 55%;
     height: 100%;
     border-radius: 8px;
 }
@@ -130,11 +131,10 @@
     font-size: 1em;
     color: #333333;
     line-height: 1.6;
-    width: 55%; /* Paragraf genişliği */
+    width: 55%;
     margin-left: 20px;
 }
 
-/* Dots Stil */
 .dots-container {
     margin-top: 20px;
 }
@@ -153,8 +153,98 @@
     background-color: rgba(255, 255, 255, 1);
 }
 
-/* You tube tanıtım videosu kısmı */
+/* Media Queries */
 
+/* Tablet ve daha küçük ekranlar için */
+@media (max-width: 768px) {
+    .product-hero-content h1,
+    .product-hero-content p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .hero-buttons-product {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .product-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card {
+        width: 80%;
+        height: auto;
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card img, .card p {
+        width: 100%;
+        margin: 0;
+    }
+
+    .card p {
+        margin-top: 15px;
+    }
+}
+
+/* Mobil ekranlar için */
+@media (max-width: 480px) {
+    .product-hero-content h1,
+    .product-hero-content p {
+        width: 100%;
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    .hero-buttons-product {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .products-section {
+        padding: 30px 10px;
+    }
+
+    .products-section h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .card h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    .dots-container {
+        margin-top: 15px;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+/* YouTube Tanıtım Videosu Kısmı */
 .moto-video-section {
     display: flex;
     flex-direction: column;
@@ -162,26 +252,26 @@
     justify-content: center;
     padding: 20px;
     text-align: center;
-    background-color: #f9f9f9; /* Arka plan rengi */
+    background-color: #f9f9f9;
 }
 
 .moto-video-section h2 {
     margin-bottom: 20px;
-    font-size: 2rem; /* Başlık boyutu */
-    color: #000000; /* Başlık rengi */
-    font-weight: bold; /* Kalın yazı */
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
 }
 
 .video-container {
     position: relative;
-    width: 80%; /* Genişliği ayarlayarak boyutlandırma */
-    max-width: 800px; /* Maksimum genişlik */
-    padding-bottom: 27.25%; /* 16:9 oranında yer tutucu */
+    width: 80%;
+    max-width: 800px;
+    padding-bottom: 30%; /* Yüksekliği daha da azaltıyoruz */
     height: 0;
     overflow: hidden;
-    background-color: #000; /* Video çerçevesi arka plan rengi */
-    border-radius: 10px; /* Yuvarlatılmış köşeler */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .video-container iframe {
@@ -190,5 +280,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Çerçeve kenarlığını kaldır */
+    border: none;
+}
+
+/* Mobil ekranlar için */
+@media (max-width: 480px) {
+    .video-container {
+        width: 100%;
+        padding-bottom: 40%; /* Mobilde de yüksekliği azaltıyoruz */
+    }
 }
